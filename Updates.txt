@@ -1,0 +1,8 @@
+cache.h
+line 81, added two vectors - currentPartition, newPartition
+
+block.h
+line 31, added variable - parent
+
+base_replacement.cc
+lru_victim(), various changes
