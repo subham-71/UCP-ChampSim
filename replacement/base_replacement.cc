@@ -1,7 +1,5 @@
 #include "cache.h"
-// #include "atd.h"
-// vector<uint32_t> currentPartition(1,16), newPartition(1,16), wayParent(16,0);
-// vector<uint32_t> currentPartition, newPartition, wayParent;
+
 uint32_t CACHE::find_victim(uint32_t cpu, uint64_t instr_id, uint32_t set, const BLOCK *current_set, uint64_t ip, uint64_t full_addr, uint32_t type)
 {
     // baseline LRU replacement policy for other caches 

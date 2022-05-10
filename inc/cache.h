@@ -78,7 +78,6 @@ extern uint32_t PAGE_TABLE_LATENCY, SWAP_LATENCY;
 #define LLC_MSHR_SIZE NUM_CPUS*64
 #define LLC_LATENCY 20  // 4/5 (L1I or L1D) + 10 + 20 = 34/35 cycles
 
-// vector<uint32_t> currentPartition, newPartition, wayParent;
 
 class CACHE : public MEMORY {
   public:
