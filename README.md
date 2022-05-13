@@ -1,12 +1,12 @@
 # UCP-ChampSim CS204 Project
 
-# Group Members:
+Group Members:
 
-Aman Kumar                    2020CSB1153
-Aman Pankaj Adatia            2020CSB1154
-Ojassvi Kumar                 2020CSB1187
-Rishabh Jain                  2020CSB1198
-Subham Subhasis Sahoo         2020CSB1317
+Aman Kumar                    2020CSB1153 <br />
+Aman Pankaj Adatia            2020CSB1154 <br />
+Ojassvi Kumar                 2020CSB1187 <br />
+Rishabh Jain                  2020CSB1198 <br />
+ubham Subhasis Sahoo          2020CSB1317 <br />
 
 
 # Execution steps:
