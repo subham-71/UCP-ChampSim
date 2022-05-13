@@ -6,7 +6,7 @@ Aman Kumar                    2020CSB1153 <br />
 Aman Pankaj Adatia            2020CSB1154 <br />
 Ojassvi Kumar                 2020CSB1187 <br />
 Rishabh Jain                  2020CSB1198 <br />
-ubham Subhasis Sahoo          2020CSB1317 <br />
+Subham Subhasis Sahoo         2020CSB1317 <br />
 
 
 # Execution steps:
@@ -39,18 +39,18 @@ We have created Auxiliary Tag Directory (ATD) to maintain in the form of UMON-gl
 
 For 4 core: <br />
 Trace: gcc_13B in all cores <br />
-Case 1: No repartitioning (Static partitioning) 
-        IPC for core 0: 0.107372 
-        IPC for core 1: 0.107081
-        IPC for core 2: 0.107522
-        IPC for core 3: 0.106291
-
-Case 2: Repartitioning after 1000 accesses (Dynamic partitioning)
-        IPC for core 0: 0.112475
-        IPC for core 1: 0.114162
-        IPC for core 2: 0.116858
-        IPC for core 3: 0.113123
-
+Case 1: No repartitioning (Static partitioning) <br />
+        IPC for core 0: 0.107372 <br />
+        IPC for core 1: 0.107081 <br />
+        IPC for core 2: 0.107522 <br />
+        IPC for core 3: 0.106291 <br />
+ 
+Case 2: Repartitioning after 1000 accesses (Dynamic partitioning) <br />
+        IPC for core 0: 0.112475 <br />
+        IPC for core 1: 0.114162 <br />
+        IPC for core 2: 0.116858 <br />
+        IPC for core 3: 0.113123 <br />
+ 
 
 Core 0 : 
         No repartitioning (Static partitioning)
