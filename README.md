@@ -82,6 +82,6 @@ As we can see by using the repartitioning technique we have improved the Instruc
 
 
 Major changes have been done in the following files: <br />
-replacement/lru.llc_repl - LRU replacement policy for each core <br />
-src/main.cc - Repartitioning algorithm <br />
-src/cache.cc - Declaration and initialisation of ATD (umonglobal, totalacceses, etc) and increasing the counter based on read and write hits in LLC <br />
+replacement/lru.llc_repl - LRU replacement policy for each core (FUCNTIONS: llc_initialize_replacement, llc_find_victim, llc_update_replacement_state)<br />
+src/main.cc - Repartitioning algorithm (LINE: 506-542 & 903-904)<br /> 
+src/cache.cc - Declaration and initialisation of ATD (umonglobal, totalacceses, etc) and increasing the counter based on read and write hits in LLC  (LINE: 4-6, 247 & 546)<br />
