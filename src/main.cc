@@ -3,6 +3,7 @@
 #include <getopt.h>
 #include "ooo_cpu.h"
 #include "uncore.h"
+// G6: 
 extern vector<uint32_t> currentPartition;
 extern vector<uint32_t> newPartition;
 extern vector<uint32_t> wayParent;
@@ -503,7 +504,7 @@ void cpu_l1i_prefetcher_cache_fill(uint32_t cpu_num, uint64_t addr, uint32_t set
   ooo_cpu[cpu_num].l1i_prefetcher_cache_fill(addr, set, way, prefetch, evicted_addr);
 }
 
-// utility function
+// G6: utility function
 float get_util(uint32_t p, uint32_t a, uint32_t b){
     if(b>LLC_WAY)
         return 0;
@@ -515,7 +516,7 @@ float get_util(uint32_t p, uint32_t a, uint32_t b){
     return sum*1.0/(b-a);
 }
 
-// greedy repartitioning algorithm
+// G6: greedy repartitioning algorithm
 void greedy_repartition(){
     uint32_t balance = LLC_WAY - NUM_CPUS;
 	vector<uint32_t> allocations(NUM_CPUS, 1);
@@ -541,7 +542,7 @@ void greedy_repartition(){
         x = 0;
 }
 
-// fuction to calculate maximum utility based on remaining balance
+// G6: fuction to calculate maximum utility based on remaining balance
 float get_max_mu(int i, int alloc, int balance){
     float max_mu = 0;
     for (int j=1; j<=balance; j++){
@@ -554,7 +555,7 @@ float get_max_mu(int i, int alloc, int balance){
     return max_mu;
 }
 
-// function to calculate block requests
+// G6: function to calculate block requests
 int get_blocks_req(int i, int alloc, int balance){
     float max_mu = 0;
     int b_req = 0;
@@ -568,7 +569,7 @@ int get_blocks_req(int i, int alloc, int balance){
     return b_req;
 }
 
-// lookahead repartitioning algorithm
+// G6: lookahead repartitioning algorithm
 void lookahead_repartition(){
     uint32_t balance = LLC_WAY - NUM_CPUS;
 	vector<uint32_t> allocations(NUM_CPUS, 1);
@@ -900,6 +901,7 @@ int main(int argc, char** argv)
 
         for (int i=0; i<NUM_CPUS; i++) {
 
+	    // G6
             if(totalAccess>1000)
                 greedy_repartition();
             // printf("%d\n", totalAccess);
