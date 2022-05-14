@@ -1,6 +1,6 @@
 #include "cache.h"
 #include "set.h"
-// #include "atd.h"
+// G6
 extern vector<uint32_t> wayParent;
 extern vector<uint32_t> umonglobal;
 extern uint32_t totalAccess;
@@ -239,12 +239,12 @@ void CACHE::handle_writeback()
     if ((WQ.entry[WQ.head].event_cycle <= current_core_cycle[writeback_cpu]) && (WQ.occupancy > 0)) {
         int index = WQ.head;
 
-        // access cache
+        // G6: access cache
         uint32_t set = get_set(WQ.entry[index].address);
         int way = check_hit(&WQ.entry[index]);
         if(cache_type == IS_LLC)
               totalAccess++;
-        if (way >= 0) { // writeback hit (or RFO hit for L1D)
+        if (way >= 0) { // G6: writeback hit (or RFO hit for L1D)
 
             if (cache_type == IS_LLC) {
                 llc_update_replacement_state(writeback_cpu, set, way, block[set][way].full_addr, WQ.entry[index].ip, 0, WQ.entry[index].type, 1);
@@ -475,7 +475,7 @@ void CACHE::handle_writeback()
 			cpu = 0;
 		      }
 
-                    // update replacement policy
+                    // G6: update replacement policy
                     if (cache_type == IS_LLC) {
                         llc_update_replacement_state(writeback_cpu, set, way, WQ.entry[index].full_addr, WQ.entry[index].ip, block[set][way].full_addr, WQ.entry[index].type, 0);
                     }
@@ -543,7 +543,7 @@ void CACHE::handle_read()
             int way = check_hit(&RQ.entry[index]);
             if(cache_type == IS_LLC)
                 totalAccess++;
-            if (way >= 0) { // read hit
+            if (way >= 0) { // G6: read hit
                 if(cache_type == IS_LLC)  {
                   umonglobal[way]++;
                 }
