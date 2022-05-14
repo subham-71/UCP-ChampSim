@@ -1,4 +1,4 @@
-# UCP-ChampSim CS204 Project
+# UCP-ChampSim CS204 Project-G6
 
 G6
 Group Members:
